@@ -1,4 +1,4 @@
-# Curso Diseño processing - CEART Ensenada
+# New Media Art - Get Gallery 
 El presente curso de processing explora las posibilidades de creación para los artistas visuales en el campo de NEW MEDIA ART
 
 Dentro de este repositorio se podran encontrar los materiales que se manejan dentro del curso
