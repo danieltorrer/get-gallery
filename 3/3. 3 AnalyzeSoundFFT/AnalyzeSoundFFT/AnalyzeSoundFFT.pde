@@ -7,30 +7,31 @@ FFT         fft;
 
 void setup()
 {
-  size(512, 200, P3D);
-  
+  size(512, 200);
+  colorMode(HSB, 359, 99 , 99);
   minim = new Minim(this);
-  jingle = minim.loadFile("jingle.mp3", 1024);
-  
+  jingle = minim.loadFile("arcade.mp3", 1024);
+
   jingle.loop();
-  
+
   fft = new FFT( jingle.bufferSize(), jingle.sampleRate() );
-  fft.linAverages(9);
-  
+  fft.linAverages(12);
 }
 
 void draw()
 {
-  background(0);
-  stroke(255);
-  
+  background(0, 0, 0);
+  stroke(0, 0, 21);
+
   fft.forward( jingle.mix );
-  
-  for(int i = 0; i < fft.avgSize(); i++)
+
+  for (int i = 0; i < fft.avgSize(); i++)
   {
+
     
     int w = int( width/fft.avgSize() );
-    rect( w * i, 0, w * (i+1), height - (fft.getAvg(i) * 15) );
+    //fill(fft.getAvg(i) * 90, 100, 100);
+    rect( w * i, 0, w * (i+1), height - (fft.getAvg(i) * 5) );
     
   }
 }

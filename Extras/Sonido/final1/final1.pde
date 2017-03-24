@@ -64,7 +64,8 @@ void draw() {
   rect(0, 0, width, height);
   
   //float volumen = 50 + out.left.level() * height * 2;
-  float volumen = map(out.left.level(), 0, 10, 0, height );
+  float volumen = map(out.left.level(), 0, 60, 0, height );
+  //float volumen = 500;
   float volumenFinal = height - (volumen * height) - 100;
   float ancho = constrain( volumenFinal, 0, height);
   stroke(#2CF2A1);
