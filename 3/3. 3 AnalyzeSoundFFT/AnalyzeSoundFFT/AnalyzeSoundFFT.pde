@@ -7,15 +7,15 @@ FFT         fft;
 
 void setup()
 {
-  size(512, 200);
+  size(1024, 400);
   colorMode(HSB, 359, 99 , 99);
   minim = new Minim(this);
-  jingle = minim.loadFile("arcade.mp3", 1024);
+  jingle = minim.loadFile("zappa.mp3", 1024);
 
   jingle.loop();
 
   fft = new FFT( jingle.bufferSize(), jingle.sampleRate() );
-  fft.linAverages(12);
+  fft.linAverages(64);
 }
 
 void draw()

@@ -1,6 +1,6 @@
 void dibujarTerreno() {
 
-  flying -= 0.1;
+  flying -= 0.007;
 
   float yoff = flying;
   //float yoff = 0;
@@ -17,7 +17,7 @@ void dibujarTerreno() {
   //daniel.torrer@gmail.com
 
 
-  background(#ffcdcd);
+  background(#2fccb8);
   stroke(#001b81);
   fill(#ff00d8, 50);
   //noFill();
