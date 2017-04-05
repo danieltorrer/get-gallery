@@ -7,7 +7,7 @@ void dibujarTerreno() {
   for (int y = 0; y < rows; y++) {
     float xoff = 0;
     for (int x = 0; x < cols; x++) {
-      terrain[x][y] = map(noise(xoff, yoff), 0, 1, -200, 200) + altura;
+      terrain[x][y] = map(noise(xoff, yoff), 0, 1, -200, 200);
       xoff += offset;
     }
     yoff += offset;

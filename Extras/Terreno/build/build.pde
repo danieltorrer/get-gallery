@@ -26,7 +26,7 @@ void setup() {
   //frameRate(30);
 
   minim = new Minim(this);
-  cancion = minim.loadFile( "skin.mp3", 1024);
+  cancion = minim.loadFile( "flesh.mp3", 1024);
 
   cancion.play();
 
